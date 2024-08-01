@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 150px;
+    }
+    button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Admin Login</h1>
+
+  <input type="text" id="input1" placeholder="Username">
+  <input type="text" id="input2" placeholder="Password">
+  <button onclick="checkLogin()">Login</button>
+
+  <script>
+    function checkLogin() {
+      let username = document.getElementById('input1').value;
+      let password = document.getElementById('input2').value;
+
+      if (username === "admin" && password === "admin") {
+        window.location.href = "/home/index.html"; // Redirect to success.html
+      } else {
+        alert("Incorrect username or password.");
+      }
+    }
+  </script>
+
+</body>
+</html>
